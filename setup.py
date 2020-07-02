@@ -31,7 +31,7 @@ readme = open('README.rst').read()
 history = open('HISTORY.rst').read().replace('.. :changelog:', '')
 
 setup(
-    name='django-stored-messages',
+    name='django3-stored-messages',
     version=version,
     description='Django contrib.messages on steroids',
     long_description=readme + '\n\n' + history,
@@ -43,7 +43,7 @@ setup(
     ],
     include_package_data=True,
     install_requires=[
-        'Django>=1.8',
+        'Django>=2',
     ],
     license="BSD",
     zip_safe=False,
@@ -56,8 +56,6 @@ setup(
         'Intended Audience :: Developers',
         'License :: OSI Approved :: BSD License',
         'Natural Language :: English',
-        "Programming Language :: Python :: 2",
-        'Programming Language :: Python :: 2.7',
         'Programming Language :: Python :: 3',
         'Programming Language :: Python :: 3.4',
         'Programming Language :: Python :: 3.5',
