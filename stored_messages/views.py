@@ -1,5 +1,5 @@
 from rest_framework import viewsets
-from rest_framework.decorators import api_view, detail_route
+from rest_framework.decorators import api_view, action
 from rest_framework.response import Response
 
 from django.contrib.auth.decorators import login_required
@@ -32,7 +32,7 @@ class InboxViewSet(viewsets.ViewSet):
         serializer = InboxSerializer(msg, many=False)
         return Response(serializer.data)
 
-    @detail_route(methods=['POST'])
+    @action(detail=True, methods=["post"])
     def read(self, request, pk=None):
         """
         Mark the message as read (i.e. delete from inbox)

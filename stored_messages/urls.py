@@ -3,6 +3,9 @@ At the moment this module does something only when restframework is available
 """
 from django.conf import settings
 
+app_name = "stored_messages"
+
+
 if 'rest_framework' in settings.INSTALLED_APPS:
     from rest_framework.routers import DefaultRouter
     from django.conf.urls import url, include
